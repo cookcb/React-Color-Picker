@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import SliderBox from "./SliderBox";
+import ColorBox from "./ColorBox";
 
 const styles = {
   background: "#ffb84d",
@@ -12,6 +13,7 @@ class ColorPicker extends Component {
     return (
       <div style={styles}>
         <SliderBox />
+        <ColorBox red={"0"} green={"0"} blue={"0"} />
       </div>
     );
   }

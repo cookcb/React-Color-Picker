@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import ColorSlider from "./ColorSlider";
 
 class SliderBox extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <div>

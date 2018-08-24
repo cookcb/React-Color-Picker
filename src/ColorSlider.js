@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 
 const style = {
-  display: "inline",
-  width: "50%"
+  display: "inline-block"
 };
 
 class ColorSlider extends Component {
@@ -16,21 +15,16 @@ class ColorSlider extends Component {
 
   render() {
     return (
-      <div style={style}>
+      <div>
         <div
           style={{
             background: this.state.hexColor,
             width: "15px",
-            height: "15px"
+            height: "15px",
+            display: "inline-block"
           }}
         />
-        <div
-          style={{
-            width: "75%"
-          }}
-        >
-          <input type="range" min="1" max="255" />
-        </div>
+        <input type="range" min="1" max="255" />
       </div>
     );
   }
