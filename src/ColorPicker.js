@@ -9,21 +9,46 @@ const styles = {
 };
 
 class ColorPicker extends Component {
-  retrieveColorValue = (color, value) => {};
+  state = {
+    r: 0,
+    g: 0,
+    b: 0
+  };
+
+  getRedColorValue = event => {
+    this.setState({ r: event.target.value });
+  };
+
+  getGreenColorValue = event => {
+    this.setState({ g: event.target.value });
+  };
+
+  getBlueColorValue = event => {
+    this.setState({ b: event.target.value });
+  };
 
   render() {
+    let { r, g, b } = this.state;
     return (
       <div style={styles}>
         <div>
           <ColorSlider
             color={"red"}
             hex={"#ff4d4d"}
-            getValue={this.retrieveColorValue.bind(this)}
+            getValue={this.getRedColorValue.bind(this)}
           />
-          <ColorSlider color={"green"} hex={"#33cc33"} />
-          <ColorSlider color={"blue"} hex={"#0066ff"} />
+          <ColorSlider
+            color={"green"}
+            hex={"#33cc33"}
+            getValue={this.getGreenColorValue.bind(this)}
+          />
+          <ColorSlider
+            color={"blue"}
+            hex={"#0066ff"}
+            getValue={this.getBlueColorValue.bind(this)}
+          />
         </div>
-        <ColorBox red={"0"} green={"0"} blue={"0"} />
+        <ColorBox red={r} green={g} blue={b} />
       </div>
     );
   }

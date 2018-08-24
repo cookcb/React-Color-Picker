@@ -24,7 +24,7 @@ class ColorSlider extends Component {
             display: "inline-block"
           }}
         />
-        <input type="range" min="1" max="255" />
+        <input type="range" min="1" max="255" onChange={this.props.getValue} />
       </div>
     );
   }

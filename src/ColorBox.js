@@ -10,6 +10,21 @@ class ColorBox extends Component {
     };
   }
 
+  static getDerivedStateFromProps = (props, state) => {
+    console.log(props);
+    if (
+      props.red !== state.r ||
+      props.green !== state.g ||
+      props.blue !== state.b
+    ) {
+      return {
+        r: props.red,
+        g: props.green,
+        b: props.blue
+      };
+    }
+  };
+
   render() {
     let { r, g, b } = this.state;
     return (
