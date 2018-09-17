@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ColorBox from "./ColorBox";
 import ColorSlider from "./ColorSlider";
+import ColorHex from "./ColorHex";
 
 const styles = {
   background: "#ffb84d",
@@ -49,6 +50,7 @@ class ColorPicker extends Component {
           />
         </div>
         <ColorBox red={r} green={g} blue={b} />
+        <ColorHex red={r} green={g} blue={b} />
       </div>
     );
   }

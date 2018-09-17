@@ -11,7 +11,6 @@ class ColorBox extends Component {
   }
 
   static getDerivedStateFromProps = (props, state) => {
-    console.log(props);
     if (
       props.red !== state.r ||
       props.green !== state.g ||
