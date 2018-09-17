@@ -3,10 +3,12 @@ import ColorBox from "./ColorBox";
 import ColorSlider from "./ColorSlider";
 import ColorHex from "./ColorHex";
 
-const styles = {
+const container = {
   background: "#ffb84d",
-  width: "500px",
-  height: "350px"
+  width: "600px",
+  height: "350px",
+  display: "flex",
+  flexDirection: "column"
 };
 
 class ColorPicker extends Component {
@@ -31,8 +33,9 @@ class ColorPicker extends Component {
   render() {
     let { r, g, b } = this.state;
     return (
-      <div style={styles}>
-        <div>
+      <div style={container}>
+        <h1 style={{ flex: 1 }}>React Color Sliders</h1>
+        <div style={{ flex: 1 }}>
           <ColorSlider
             color={"red"}
             hex={"#ff4d4d"}
@@ -49,8 +52,8 @@ class ColorPicker extends Component {
             getValue={this.getBlueColorValue.bind(this)}
           />
         </div>
-        <ColorBox red={r} green={g} blue={b} />
-        <ColorHex red={r} green={g} blue={b} />
+        <ColorBox style={{ flex: 1 }} red={r} green={g} blue={b} />
+        <ColorHex style={{ flex: 1 }} red={r} green={g} blue={b} />
       </div>
     );
   }
