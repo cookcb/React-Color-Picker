@@ -7,8 +7,8 @@ const container = {
   background: "#ffb84d",
   width: "600px",
   height: "350px",
-  display: "flex",
-  flexDirection: "column"
+  display: "grid",
+  gridTemplateColumns: "10rem 10rem"
 };
 
 class ColorPicker extends Component {
@@ -34,8 +34,8 @@ class ColorPicker extends Component {
     let { r, g, b } = this.state;
     return (
       <div style={container}>
-        <h1 style={{ flex: 1 }}>React Color Sliders</h1>
-        <div style={{ flex: 1 }}>
+        <h1 style={{ gridColumn: "span 2" }}>React Color Sliders</h1>
+        <div style={{}}>
           <ColorSlider
             color={"red"}
             hex={"#ff4d4d"}
@@ -51,9 +51,9 @@ class ColorPicker extends Component {
             hex={"#0066ff"}
             getValue={this.getBlueColorValue.bind(this)}
           />
+          <ColorHex style={{}} red={r} green={g} blue={b} />
         </div>
-        <ColorBox style={{ flex: 1 }} red={r} green={g} blue={b} />
-        <ColorHex style={{ flex: 1 }} red={r} green={g} blue={b} />
+        <ColorBox style={{}} red={r} green={g} blue={b} />
       </div>
     );
   }
