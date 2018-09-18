@@ -22,6 +22,7 @@ class ColorBox extends Component {
         b: props.blue
       };
     }
+    return null;
   };
 
   render() {

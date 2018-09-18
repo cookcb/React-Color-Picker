@@ -9,9 +9,17 @@ class ColorSlider extends Component {
     super(props);
     this.state = {
       sliderColor: props.color,
-      hexColor: props.hex
+      hexColor: props.hex,
+      value: 1
     };
   }
+
+  handleChange = e => {
+    this.setState({
+      value: e.target.value
+    });
+    this.props.getValue(e);
+  };
 
   render() {
     return (
@@ -24,7 +32,14 @@ class ColorSlider extends Component {
             display: "inline-block"
           }}
         />
-        <input type="range" min="1" max="255" onChange={this.props.getValue} />
+        <input
+          type="range"
+          min="1"
+          max="255"
+          value={this.state.value}
+          onChange={this.handleChange.bind(this)}
+        />
+        <span>{this.state.value}</span>
       </div>
     );
   }

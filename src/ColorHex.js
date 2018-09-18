@@ -28,6 +28,7 @@ class ColorHex extends Component {
         blue: props.blue
       };
     }
+    return null;
   };
 
   getHexString = (red, green, blue) => {
