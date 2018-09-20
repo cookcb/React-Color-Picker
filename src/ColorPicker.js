@@ -4,11 +4,11 @@ import ColorSlider from "./ColorSlider";
 import ColorHex from "./ColorHex";
 
 const container = {
-  background: "#ffb84d",
+  fontFamily: "Verdana, Geneva, sans-serif",
   width: "600px",
   height: "350px",
   display: "grid",
-  gridTemplateColumns: "10rem 10rem"
+  gridTemplateColumns: "12rem 10rem"
 };
 
 class ColorPicker extends Component {
