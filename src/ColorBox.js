@@ -31,7 +31,7 @@ class ColorBox extends Component {
       <div
         style={{
           background: "rgb(" + r + ", " + g + ", " + b + ")",
-          height: "200px",
+          height: "150px",
           width: "200px"
         }}
       />
